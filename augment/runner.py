@@ -41,7 +41,7 @@ def run_experiment(seed):
     # Buffers for storing performance for all trial_types
     n_trial_types = len(task.trial_types)
     result_buffer = np.zeros((n_trial_types, stopping_crit_window))
-    result_buffer_idces = np.zeros(n_trial_types)
+    result_buffer_idces = np.zeros(n_trial_types, dtype=np.int)
     result_buffer_avgs = np.zeros((n_trial_types, trials))
 
     # Trial results (0: failure, 1: success)
